@@ -1,0 +1,7 @@
+{
+  "name": "Mystic Soda - The Uncategorizable Sip",
+  "description": "A high-converting, modern website for a global beverage brand featuring interactive flavor quizzes, bold branding, and conversion-optimized product showcases.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

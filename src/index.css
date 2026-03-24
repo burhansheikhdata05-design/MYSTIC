@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-primary: #4A0E0E;
+  --color-brand-accent: #FF6B00;
+  --color-brand-cream: #F5F5DC;
+  --color-brand-black: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-black font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold uppercase tracking-tighter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-accent text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-brand-accent/40;
+  }
+  
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-md border-b border-white/20 sticky top-0 z-50;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap');
